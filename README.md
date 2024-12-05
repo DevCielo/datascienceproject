@@ -4,13 +4,12 @@
 
 1. Data Ingestion
 2. Data Validation
-2. Data Transformation
+2. Data Transformation -- Feature Engineering, Data Preprocessing
 3. Model Trainer
 4. Model Evaluation
 
 ## Workflows
 
-DURING DATA INGESTION
 1. update config.yaml
 2. update schema.yaml
 3. update params.yaml
