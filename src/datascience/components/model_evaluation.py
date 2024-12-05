@@ -13,9 +13,14 @@ from src.datascience.constants import *
 from src.datascience.utils.common import read_yaml, create_directories, save_json
 
 import os
-os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/nicolosicielo/datascienceproject.mlflow"
-os.environ["MLFLOW_TRACKING_USERNAME"] = "nicolosicielo"
-os.environ["MLFLOW_TRACKING_PASSWORD"] = "cbea4591d560244ab4844437df5a56510faa74f4"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+os.environ["MLFLOW_TRACKING_URI"] = os.getenv("MLFLOW_TRACKING_URI")
+os.environ["MLFLOW_TRACKING_USERNAME"] = os.getenv("MLFLOW_TRACKING_USERNAME")
+os.environ["MLFLOW_TRACKING_PASSWORD"] = os.getenv("MLFLOW_TRACKING_PASSWORD")
+
 
 class ModelEvaluation:
     def __init__(self, config: ModelEvaluationConfig):
